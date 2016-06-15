@@ -6,7 +6,7 @@ hexo.extend.tag.register('tag_url', function(args, content){
 hexo.extend.tag.register('tag_link', function (args, content) {
   var tag = args[0] || '';
   var label = args[1] || tag;
-  var url = `/tags/${tag.replace(' ', '-')}/`;
+  var url = `/tags/${tag.toLowerCase().replace(' ', '-')}/`;
 
   return `<a href='${url}'>${label}</a>`;
 });
